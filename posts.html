@@ -1,0 +1,37 @@
+---
+layout: default
+permalink: /posts/
+title: Posts
+---
+
+<h1 class="row no-gutters align-items-end">
+    <span class="offset-1 col-10 text-center">Posts</span>
+    <a class="col-1 h4 text-right" href="{{ "/feed.xml" | relative_url }}" aria-label="Feed">
+        <i class="fas fa-rss" style="color: #ee802f;" title="Feed" aria-hidden="true"></i>
+    </a>
+</h1>
+
+<div class="row row-cols-1">
+    {% for post in site.posts %}
+    <div class="col mt-4">
+    <article class="card bg-light">
+    {% if post.image %}
+    <div class="row no-gutters">
+        <div class="col-xl-4">
+            <img src="{{ post.image | relative_url }}" class="card-img" alt="">
+        </div>
+        <div class="col-xl-8">
+    {% endif %}
+        <div class="card-body">
+            <h2 class="h4 card-title"><a class="card-link" href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+            <p class="h6 card-subtitle mb-2 text-muted"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time></p>
+            <p class="card-text">{{ post.excerpt | strip_html }}</p>
+        </div>
+    {% if post.image %}
+        </div>
+    </div>
+    {% endif %}
+    </article>
+    </div>
+    {% endfor %}
+</div>

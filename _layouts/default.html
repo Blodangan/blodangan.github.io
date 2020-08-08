@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+    {%- include head.html -%}
+
+    <body class="d-flex flex-column min-vh-100">
+        <div class="container">
+            <a class="sr-only sr-only-focusable d-inline-flex p-2 m-1" href="#main-content">Skip to main content</a>
+        </div>
+
+        {%- include header.html -%}
+
+        <main id="main-content" class="container flex-fill mt-3">
+            {{ content }}
+        </main>
+
+        {%- include footer.html -%}
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    </body>
+</html>

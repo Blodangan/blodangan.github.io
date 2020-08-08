@@ -1,0 +1,45 @@
+title: Ulysse Rigaut
+
+description: Homepage of Ulysse Rigaut. Computer graphics enthusiast, focused on animation and games.
+
+url: http://ulysserigaut.com
+
+author:
+  name: Ulysse Rigaut
+  twitter: blodangan
+
+twitter:
+  username: blodangan
+  card: summary
+
+collections:
+  posts:
+    output: true
+    permalink: /posts/:year/:month/:title/
+  projects:
+    output: true
+    permalink: /projects/:title/
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+sass:
+  style: compressed
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag

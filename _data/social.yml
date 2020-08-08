@@ -1,0 +1,9 @@
+- name: E-mail
+  icon: fas fa-envelope
+  link: mailto:contact@ulysserigaut.com
+- name: Twitter
+  icon: fab fa-twitter
+  link: https://twitter.com/blodangan
+- name: GitHub
+  icon: fab fa-github
+  link: https://github.com/Blodangan

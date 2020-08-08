@@ -1,0 +1,17 @@
+.hr {
+    height: 1px;
+    margin: 1rem 0;
+    color: inherit;
+    background-color: currentColor;
+    border: 0;
+    opacity: 0.125;
+}
+
+div.highlight {
+    background: transparent;
+}
+
+pre.highlight {
+    border-radius: 0.25rem;
+    padding: 0.25rem;
+}

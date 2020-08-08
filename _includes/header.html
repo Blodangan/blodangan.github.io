@@ -1,0 +1,27 @@
+<header class="sticky-top">
+    <nav class="navbar navbar-expand-sm navbar-light bg-light border-bottom">
+    <div class="container">
+        <a class="navbar-brand" href="{{ "/" | relative_url }}" aria-label="Home">{{ site.title }}</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav mr-auto">
+            {% for nav in site.data.nav %}
+                <a class="nav-item nav-link" href="{{ nav.link | relative_url }}">{{ nav.name }}</a>
+            {% endfor %}
+            </div>
+
+            <div class="navbar-nav flex-row justify-content-around">
+            {% for social in site.data.social %}
+                <a class="nav-item nav-link" href="{{ social.link }}" aria-label="{{ social.name }}">
+                    <i class="{{ social.icon }}" title="{{ social.name }}" aria-hidden="true"></i>
+                </a>
+            {% endfor %}
+            </div>
+        </div>
+    </div>
+    </nav>
+</header>
