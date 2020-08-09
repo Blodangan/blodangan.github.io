@@ -36,6 +36,8 @@ defaults:
     values:
       layout: "default"
 
+exclude: ["Gemfile", "Gemfile.lock", "README.md"]
+
 sass:
   style: compressed
 
