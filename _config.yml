@@ -36,7 +36,7 @@ defaults:
     values:
       layout: "default"
 
-exclude: ["Gemfile", "Gemfile.lock", "README.md"]
+exclude: ["Gemfile", "Gemfile.lock", "CNAME", "README.md"]
 
 sass:
   style: compressed
