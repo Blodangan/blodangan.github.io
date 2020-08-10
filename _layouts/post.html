@@ -13,11 +13,21 @@ layout: default
 
     {{ content }}
 
+    {% if page.comments != false %}
+    <hr>
+
+    <h2 class="h3">
+        <i class="fab fa-github" aria-hidden="true"></i>
+        GitHub Comments
+    </h2>
+
     <script src="https://utteranc.es/client.js"
             repo="Blodangan/blodangan.github.io"
             issue-term="og:title"
+            label="comments"
             theme="github-light"
             crossorigin="anonymous"
             async>
     </script>
+    {% endif %}
 </article>

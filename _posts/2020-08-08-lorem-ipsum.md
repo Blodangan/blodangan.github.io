@@ -1,5 +1,6 @@
 ---
 title: Lorem ipsum
+comments: false
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum condimentum nisl a nibh tincidunt molestie. Aenean volutpat magna quis orci.
