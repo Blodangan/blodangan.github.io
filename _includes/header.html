@@ -16,8 +16,8 @@
 
             <div class="navbar-nav flex-row justify-content-around">
             {% for social in site.data.social %}
-                <a class="nav-item nav-link" href="{{ social.link }}" aria-label="{{ social.name }}">
-                    <i class="{{ social.icon }}" title="{{ social.name }}" aria-hidden="true"></i>
+                <a class="nav-item nav-link" href="{{ social.link }}">
+                    {%- include icons.html icon=social.icon title=social.name -%}
                 </a>
             {% endfor %}
             </div>

@@ -19,3 +19,13 @@ pre.highlight {
     @extend .rounded;
     @extend .p-1;
 }
+
+.icon {
+    display: inline-block;
+    font-size: inherit;
+    width: 1em;
+    height: 1em;
+    overflow: visible;
+    vertical-align: -0.125em;
+    fill: currentColor;
+}

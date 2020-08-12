@@ -1,0 +1,10 @@
+{% capture file %}
+{%- include {{ include.icon | prepend: "icons/" | append: ".svg" }} -%}
+{% endcapture %}
+
+{% assign file = file | split: ">" %}
+{% assign title_id = include.title | slugify: "ascii" | prepend: "svg-title-" %}
+
+{{ file | first }} class="icon" role="img" {% if include.style %}style="{{ include.style }}"{% endif %} {% unless include.title %}aria-hidden="true">{% else %}aria-labelledby="{{ title_id }}">
+    <title id="{{ title_id }}">{{ include.title }}</title>{% endunless %}
+    {{ file | shift | join: ">" | append: ">" }}
