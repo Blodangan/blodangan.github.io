@@ -4,9 +4,9 @@ image:
     path: https://picsum.photos/id/1002/1280/720
     width: 1280
     height: 720
-date:
-    from: 2019-01-01T00:00:00Z
-    to: 2020-02-01T00:00:00Z
+datetime:
+    from: 2019-01-01
+    to: 2020-02-01
 tags: three.js JavaScript
 ---
 

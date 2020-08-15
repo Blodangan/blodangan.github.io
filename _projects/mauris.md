@@ -4,7 +4,7 @@ image:
     path: https://picsum.photos/id/1015/1280/720
     width: 1280
     height: 720
-date: 2020-01-01T00:00:00Z
+datetime: 2020-01-01
 tags: SDL C
 ---
 

@@ -16,9 +16,9 @@ title: Projects
         <div class="card-body">
             <h2 class="h3 card-title"><a class="card-link" href="{{ project.url | relative_url }}">{{ project.title }}</a></h2>
             <p class="h6 card-subtitle mb-2 text-muted">
-                {% assign from = project.date.from | default: project.date %}
+                {% assign from = project.datetime.from | default: project.datetime %}
                 <time datetime="{{ from | date_to_xmlschema }}">{{ from | date: "%B, %Y" }}</time>
-                {% if project.date.to %}<time datetime="{{ project.date.to | date_to_xmlschema }}">{{ project.date.to | date: "%B, %Y" }}</time>{% endif %}
+                {% if project.datetime.to %}- <time datetime="{{ project.datetime.to | date_to_xmlschema }}">{{ project.datetime.to | date: "%B, %Y" }}</time>{% endif %}
             </p>
             <p class="card-text">{{ project.excerpt | strip_html }}</p>
         </div>

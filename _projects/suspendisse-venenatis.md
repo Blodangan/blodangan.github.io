@@ -4,7 +4,7 @@ image:
     path: https://picsum.photos/id/171/1280/720
     width: 1280
     height: 720
-date: 2016-08-01T00:00:00Z
+datetime: 2016-08-01
 tags: OpenGL C++
 ---
 
