@@ -5,6 +5,7 @@
     line-height: $headings-line-height;
     color: $headings-color;
     @include font-size($heading-font-size);
+    @extend .text-center;
 }
 
 .hr {
