@@ -1,6 +1,9 @@
 ---
 title: Suspendisse venenatis mi sit amet justo tincidunt
 image: https://picsum.photos/1920/1080
+img:
+    width: 1920
+    height: 1080
 ---
 
 Suspendisse venenatis mi sit amet justo tincidunt, in consequat nulla efficitur. In scelerisque ante sed mi sagittis auctor. In tempor lectus ac augue viverra semper. Cras cursus placerat iaculis.
