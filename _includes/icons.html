@@ -3,7 +3,7 @@
 {% endcapture %}
 
 {% assign before = file | split: ">" | first %}
-{% assign after = file | remove_first: before %}
+{% assign after = file | remove_first: before | remove_first: ">" %}
 
 {% assign label = include.title | slugify: "ascii" | prepend: "svg-title-" %}
 
