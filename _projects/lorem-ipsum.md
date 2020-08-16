@@ -5,8 +5,8 @@ image:
     width: 1280
     height: 720
 datetime:
-    from: 2019-01-01
-    to: 2020-02-01
+    from: 2019-01
+    to: 2020-02
 tags: three.js JavaScript
 ---
 

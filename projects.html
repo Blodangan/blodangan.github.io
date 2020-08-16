@@ -7,7 +7,8 @@ title: Projects
 <h1 class="heading">Projects</h1>
 
 <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
-    {% for project in site.projects %}
+    {% assign projects = site.projects | sort: "datetime.from" | reverse %}
+    {% for project in projects %}
     <div class="col mt-4">
     <article class="card h-100 bg-light">
         {% if project.image %}
@@ -16,9 +17,8 @@ title: Projects
         <div class="card-body">
             <h2 class="h3 card-title"><a class="card-link" href="{{ project.url | relative_url }}">{{ project.title }}</a></h2>
             <p class="h6 card-subtitle mb-2 text-muted">
-                {% assign from = project.datetime.from | default: project.datetime %}
-                <time datetime="{{ from | date_to_xmlschema }}">{{ from | date: "%B, %Y" }}</time>
-                {% if project.datetime.to %}- <time datetime="{{ project.datetime.to | date_to_xmlschema }}">{{ project.datetime.to | date: "%B, %Y" }}</time>{% endif %}
+                <time datetime="{{ project.datetime.from }}">{{ project.datetime.from | append: "-01" | date: "%B %Y" }}</time>
+                {% if project.datetime.to %}- <time datetime="{{ project.datetime.to }}">{{ project.datetime.to | append: "-01" | date: "%B %Y" }}</time>{% endif %}
             </p>
             <p class="card-text">{{ project.excerpt | strip_html }}</p>
         </div>

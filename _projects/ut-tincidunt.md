@@ -5,8 +5,8 @@ image:
     width: 1280
     height: 720
 datetime:
-    from: 2018-05-01
-    to: 2018-08-01
+    from: 2018-05
+    to: 2018-08
 tags: Python pygame
 ---
 
