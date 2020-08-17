@@ -8,6 +8,5 @@ datetime:
     from: 2018-05
     to: 2018-08
 tags: Python pygame
+description: Ut tincidunt ornare metus eu vulputate. Vestibulum ac eleifend nisi, id aliquam augue.
 ---
-
-Ut tincidunt ornare metus eu vulputate. Vestibulum ac eleifend nisi, id aliquam augue.

@@ -15,14 +15,15 @@ title: Projects
         <img src="{{ project.image.path | relative_url }}" width="{{ project.image.width }}" height="{{ project.image.height }}" class="card-img-top img-fluid" alt="">
         {% endif %}
         <div class="card-body">
-            <h2 class="h3 card-title"><a class="card-link" href="{{ project.url | relative_url }}">{{ project.title }}</a></h2>
+            {% assign count = project.content | number_of_words %}
+            <h2 class="h3 card-title">{% if count != 0 %}<a class="card-link" href="{{ project.url | relative_url }}">{% endif %}{{ project.title }}{% if count != 0 %}</a>{% endif %}</h2>
             {% if project.datetime.from %}
             <p class="h6 card-subtitle mb-2 text-muted">
                 <time datetime="{{ project.datetime.from }}">{{ project.datetime.from | append: "-01" | date: "%B %Y" }}</time>
                 {% if project.datetime.to %}- <time datetime="{{ project.datetime.to }}">{{ project.datetime.to | append: "-01" | date: "%B %Y" }}</time>{% endif %}
             </p>
             {% endif %}
-            <p class="card-text">{{ project.excerpt | strip_html }}</p>
+            <p class="card-text">{{ project.description | default: project.excerpt | strip_html }}</p>
         </div>
         {% if project.tags != empty %}
         <div class="card-footer">
