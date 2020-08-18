@@ -1,6 +1,7 @@
 ---
 title: Lorem ipsum
 comments: false
+description: The rendering equation.
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum condimentum nisl a nibh tincidunt molestie. Aenean volutpat magna quis orci.
