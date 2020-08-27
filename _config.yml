@@ -36,6 +36,11 @@ defaults:
     values:
       layout: "default"
 
+kramdown:
+  toc_levels: 2..3
+
+markdown_ext: "md"
+
 exclude: ["Gemfile", "Gemfile.lock", "CNAME", "README.md"]
 
 sass:

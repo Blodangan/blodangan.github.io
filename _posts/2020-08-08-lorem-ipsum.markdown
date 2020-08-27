@@ -1,5 +1,6 @@
 ---
 title: Lorem ipsum
+toc: false
 comments: false
 description: The rendering equation.
 ---

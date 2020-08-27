@@ -30,3 +30,40 @@ pre.highlight {
     vertical-align: -0.125em;
     fill: currentColor;
 }
+
+:target::before {
+    content: "";
+    display: block;
+    height: 67px;
+    margin-top: -67px;
+}
+
+@media screen and (min-width: 1600px) {
+    aside {
+        position: fixed;
+        top: 85px;
+        left: calc(50% + 610px);
+    }
+}
+
+#markdown-toc {
+    @extend .nav;
+    @extend .flex-column;
+}
+
+#markdown-toc ul {
+    @extend .nav;
+    @extend .flex-column;
+    @extend .ml-4;
+}
+
+#markdown-toc li {
+    @extend .nav-item;
+}
+
+#markdown-toc a {
+    @extend .nav-link;
+    @extend .p-0;
+    @extend .ml-3;
+    @extend .my-1;
+}
