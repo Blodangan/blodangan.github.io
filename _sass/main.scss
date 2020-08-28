@@ -49,6 +49,7 @@ pre.highlight {
 #markdown-toc {
     @extend .nav;
     @extend .flex-column;
+    @extend .ml-3;
 }
 
 #markdown-toc ul {
@@ -57,13 +58,6 @@ pre.highlight {
     @extend .ml-4;
 }
 
-#markdown-toc li {
-    @extend .nav-item;
-}
-
-#markdown-toc a {
-    @extend .nav-link;
-    @extend .p-0;
-    @extend .ml-3;
-    @extend .my-1;
+#markdown-toc > li {
+    @extend .mb-1;
 }
