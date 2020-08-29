@@ -25,12 +25,16 @@ title: Projects
             {% endif %}
             <p class="card-text">{{ project.description | default: project.excerpt | strip_html }}</p>
         </div>
-        {% if project.tags != empty %}
+        {% if project.tags != empty or project.github %}
         <div class="card-footer">
-            <p class="card-text">
+            <p class="card-text {% if project.tags == empty %}text-center{% endif %}">
                 {% for tag in project.tags %}
-                <span class="badge badge-secondary">{{ tag }}</span>
+                <span class="badge badge-secondary align-text-bottom">{{ tag }}</span>
                 {% endfor %}
+                {% if project.github %}
+                {% assign title = project.title | append: " on GitHub" %}
+                <a class="card-link h4 mb-0 text-body {% if project.tags != empty %}float-right{% endif %}" href="{{ project.github }}">{%- include icons.html icon="github" title=title -%}</a>
+                {% endif %}
             </p>
         </div>
         {% endif %}
