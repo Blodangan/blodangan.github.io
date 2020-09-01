@@ -63,5 +63,10 @@ pre.highlight {
 }
 
 #markdown-toc > li {
+    display: grid;
     @extend .mb-1;
+}
+
+#markdown-toc a {
+    @extend .text-truncate;
 }
