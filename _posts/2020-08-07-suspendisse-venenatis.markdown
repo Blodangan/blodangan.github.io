@@ -1,7 +1,7 @@
 ---
 title: Suspendisse venenatis mi sit amet justo tincidunt
 image:
-    path: https://picsum.photos/1920/1080
+    path: https://picsum.photos/id/274/1920/1080
     width: 1920
     height: 1080
 ---
