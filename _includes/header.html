@@ -10,7 +10,11 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav mr-auto">
             {% for nav in site.data.nav %}
+                {% if page.url == nav.link %}
+                <a class="nav-item nav-link active" href="{{ nav.link | relative_url }}">{{ nav.name }} <span class="sr-only">(current)</span></a>
+                {% else %}
                 <a class="nav-item nav-link" href="{{ nav.link | relative_url }}">{{ nav.name }}</a>
+                {% endif %}
             {% endfor %}
             </div>
 
