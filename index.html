@@ -1,8 +1,12 @@
 ---
 layout: default
+image:
+    path: /assets/home.jpg
+    width: 1920
+    height: 1080
 ---
 
-<img src="{{ "/assets/home.jpg" | relative_url }}" width="1920" height="1080" class="img-fluid rounded d-block mx-auto mb-2" alt="">
+<img src="{{ page.image.path | relative_url }}" width="{{ page.image.width }}" height="{{ page.image.height }}" class="img-fluid rounded d-block mx-auto mb-2" alt="">
 
 <h1 class="heading">Home</h1>
 
