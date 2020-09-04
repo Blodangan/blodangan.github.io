@@ -38,15 +38,38 @@ pre.highlight {
 :target::before {
     content: "";
     display: block;
-    height: 67px;
-    margin-top: -67px;
+    height: calc(4rem + 2px);
+    margin-top: calc(-4rem - 2px);
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 100rem) {
     aside {
         position: fixed;
-        top: 85px;
+        top: calc(5rem + 2px);
         left: calc(50% + 610px);
+        max-height: calc(100vh - 6rem - 2px);
+        overflow-y: auto;
+        scrollbar-width: thin;
+    }
+
+    aside::-webkit-scrollbar {
+        width: 8px;
+        background-color: #f0f0f0;
+    }
+
+    aside::-webkit-scrollbar-thumb {
+        background-color: #cdcdcd;
+        background-clip: content-box;
+        border-left: 1px solid transparent;
+        border-right: 1px solid transparent;
+    }
+
+    aside::-webkit-scrollbar-thumb:hover {
+        background-color: #a6a6a6;
+    }
+
+    aside::-webkit-scrollbar-thumb:active {
+        background-color: #606060;
     }
 }
 
