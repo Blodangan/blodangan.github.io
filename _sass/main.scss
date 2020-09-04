@@ -25,6 +25,11 @@ pre.highlight {
     @extend .p-1;
 }
 
+mjx-container {
+    overflow-x: auto;
+    padding: 1px;
+}
+
 .icon {
     display: inline-block;
     font-size: inherit;
