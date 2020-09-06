@@ -5,7 +5,7 @@ sitemap: false
 
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
-    <title>{{ site.title | append: " - Feed" }}</title>
+    <title>{{ site.title | prepend: "Posts on " }}</title>
     <subtitle>{{ site.description }}</subtitle>
     <updated>{{ site.time | date_to_xmlschema }}</updated>
     <id>{{ page.url | absolute_url }}</id>

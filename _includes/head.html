@@ -3,7 +3,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
 
-    <link rel="alternate" type="application/atom+xml" href="{{ "/feed.xml" | relative_url }}" title="{{ site.title | append: " - Feed" }}">
+    <link rel="alternate" type="application/atom+xml" href="{{ "/feed.xml" | relative_url }}" title="{{ site.title | prepend: "Posts on " }}">
     {% seo title=false %}
 
     <link rel="apple-touch-icon" sizes="180x180" href="{{ "/apple-touch-icon.png" | relative_url }}">
