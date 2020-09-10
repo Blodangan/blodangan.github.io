@@ -9,8 +9,7 @@ layout: default
         {% endif %}
 
         <div class="d-flex align-items-center mb-1">
-            <h1 class="mb-0 flex-grow-1">{{ page.title }}</h1>
-
+            <h1 class="mb-0 mr-auto">{{ page.title }}</h1>
             {% if page.github %}
             {% assign title = page.title | append: " on GitHub" %}
             <a class="h3 mb-0 text-body" href="{{ page.github }}">{%- include icons.html icon="github" title=title -%}</a>
@@ -18,7 +17,7 @@ layout: default
         </div>
 
         <p class="d-flex align-items-center">
-            <span class="h6 mb-0 text-muted flex-grow-1">
+            <span class="h6 mb-0 text-muted mr-auto">
                 <time datetime="{{ page.datetime.from }}">{{ page.datetime.from | append: "-01" | date: "%B %Y" }}</time>
                 {% if page.datetime.to %}
                 {% if page.datetime.from != page.datetime.to %}- <time datetime="{{ page.datetime.to }}">{{ page.datetime.to | append: "-01" | date: "%B %Y" }}</time>{% endif %}
