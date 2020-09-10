@@ -1,28 +1,25 @@
 ---
 layout: default
-image:
-    path: /assets/home.jpg
-    width: 1078
-    height: 1078
 ---
 
+{% if page.image %}
 <div class="row justify-content-center mb-3">
     <div class="col-xl-7 col-lg-8 col-md-9 col-sm-10 col">
         <img src="{{ page.image.path | relative_url }}" width="{{ page.image.width }}" height="{{ page.image.height }}" class="img-fluid rounded" alt="">
     </div>
 </div>
+{% endif %}
 
 <div class="row">
     <div class="col-lg-7">
-        <h1 class="h2">Welcome,</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacinia lectus quis fringilla ullamcorper. Donec porttitor quam quam. Morbi sed tincidunt elit. Sed mattis tortor semper convallis tristique. Praesent eu interdum lectus, sit amet mollis ipsum. Donec cursus vel nibh vitae bibendum. Ut vehicula quam libero, quis pellentesque risus dignissim id.</p>
-        <p>Aenean tincidunt, metus malesuada aliquam congue, est nibh vestibulum dui, eget tincidunt libero mi sed sem. Ut auctor turpis vitae pretium gravida. In eu nibh efficitur, rhoncus nisi iaculis, rutrum lorem. Nulla aliquet dui ut tellus auctor suscipit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed tempor feugiat metus vitae eleifend. Aenean et viverra dui, sit amet ultricies erat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce justo lacus, finibus a ultricies vitae, sodales in nunc.</p>
+        {{ content }}
     </div>
     <div class="offset-lg-1 col-lg-4">
         <h2>Latest news</h2>
         <div class="list-group">
         {% assign news = site.data.news | sort: "date" | reverse %}
-        {% for item in news limit: 4 %}
+        {% assign limit = page.news | default: 4 %}
+        {% for item in news limit: limit %}
             {% if item.link %}
             <a class="list-group-item list-group-item-action" href="{{ item.link }}">
             {% else %}
