@@ -1,7 +1,7 @@
 @import "bootstrap-4.5.0/functions";
 @import "bootstrap-4.5.0/variables";
 @import "bootstrap-4.5.0/mixins";
-@import "bootstrap-4.5.0/root";
+// @import "bootstrap-4.5.0/root";
 @import "bootstrap-4.5.0/reboot";
 @import "bootstrap-4.5.0/type";
 @import "bootstrap-4.5.0/images";
@@ -25,7 +25,7 @@
 // @import "bootstrap-4.5.0/alert";
 // @import "bootstrap-4.5.0/progress";
 // @import "bootstrap-4.5.0/media";
-// @import "bootstrap-4.5.0/list-group";
+@import "bootstrap-4.5.0/list-group";
 // @import "bootstrap-4.5.0/close";
 // @import "bootstrap-4.5.0/toasts";
 // @import "bootstrap-4.5.0/modal";
