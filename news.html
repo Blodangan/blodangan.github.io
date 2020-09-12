@@ -9,21 +9,13 @@ title: News
         <div class="list-group">
         {% assign news = site.data.news | sort: "date" | reverse %}
         {% for item in news %}
-            {% if item.link %}
-            <a class="list-group-item list-group-item-action" href="{{ item.link }}">
-            {% else %}
-            <span class="list-group-item list-group-item-action">
-            {% endif %}
+            <a class="list-group-item list-group-item-action" {% if item.link %}href="{{ item.link }}"{% else %}style="color: #495057;"{% endif %}>
                 <div class="d-flex w-100 justify-content-between">
                     <h2 class="h6">{{ item.title }}</h2>
                     <small><time datetime="{{ item.date | date: "%Y-%m-%d" }}">{{ item.date | date: "%B %d, %Y" }}</time></small>
                 </div>
                 <p class="mb-0">{{ item.content }}</p>
-            {% if item.link %}
             </a>
-            {% else %}
-            </span>
-            {% endif %}
         {% endfor %}
         </div>
     </div>

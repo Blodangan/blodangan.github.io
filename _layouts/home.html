@@ -20,21 +20,13 @@ layout: default
         {% assign news = site.data.news | sort: "date" | reverse %}
         {% assign limit = page.news | default: 4 %}
         {% for item in news limit: limit %}
-            {% if item.link %}
-            <a class="list-group-item list-group-item-action" href="{{ item.link }}">
-            {% else %}
-            <span class="list-group-item list-group-item-action">
-            {% endif %}
+            <a class="list-group-item list-group-item-action" {% if item.link %}href="{{ item.link }}"{% else %}style="color: #495057;"{% endif %}>
                 <div class="d-flex w-100 justify-content-between">
                     <h3 class="h6">{{ item.title }}</h3>
                     <small><time datetime="{{ item.date | date: "%Y-%m-%d" }}">{{ item.date | date: "%B %d, %Y" }}</time></small>
                 </div>
                 <p class="mb-0">{{ item.content }}</p>
-            {% if item.link %}
             </a>
-            {% else %}
-            </span>
-            {% endif %}
         {% endfor %}
         <a class="list-group-item list-group-item-action" href="/news/">
             <h3 class="h6 mb-0">All news&hellip;</h3>
