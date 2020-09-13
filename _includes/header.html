@@ -1,7 +1,7 @@
 <header class="sticky-top">
     <nav class="navbar navbar-expand-sm navbar-light bg-light border-bottom">
     <div class="container">
-        <a class="navbar-brand" href="{{ "/" | relative_url }}" aria-label="Home">{{ site.title }}</a>
+        <a class="navbar-brand" href="{{ "/" | relative_url }}" aria-label="Home {% if page.url == "/" %}(current){% endif %}">{{ site.title }}</a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
