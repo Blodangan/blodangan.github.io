@@ -17,11 +17,12 @@ title: Projects
             <h2 class="h3 card-title">{% if count != 0 %}<a class="card-link" href="{{ project.url | relative_url }}">{% endif %}{{ project.title }}{% if count != 0 %}</a>{% endif %}</h2>
             {% if project.datetime.from %}
             <p class="h6 card-subtitle mb-2 text-muted">
+                {% if project.datetime.from != project.datetime.to %}<span class="sr-only">from</span>{% endif %}
                 <time datetime="{{ project.datetime.from }}">{{ project.datetime.from | append: "-01" | date: "%B %Y" }}</time>
                 {% if project.datetime.to %}
-                {% if project.datetime.from != project.datetime.to %}- <time datetime="{{ project.datetime.to }}">{{ project.datetime.to | append: "-01" | date: "%B %Y" }}</time>{% endif %}
+                {% if project.datetime.from != project.datetime.to %}<span aria-hidden="true">-</span><span class="sr-only">to</span> <time datetime="{{ project.datetime.to }}">{{ project.datetime.to | append: "-01" | date: "%B %Y" }}</time>{% endif %}
                 {% else %}
-                - &hellip;
+                <span aria-hidden="true">- &hellip;</span><span class="sr-only">to current</span>
                 {% endif %}
             </p>
             {% endif %}
@@ -30,6 +31,7 @@ title: Projects
         {% if project.tags != empty or project.github %}
         <div class="card-footer">
             <p class="card-text {% if project.tags == empty %}text-center{% endif %}">
+                <span class="sr-only">Categories:</span>
                 {% for tag in project.tags %}
                 <span class="badge badge-secondary align-text-bottom">{{ tag }}</span>
                 {% endfor %}

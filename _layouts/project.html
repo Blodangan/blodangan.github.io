@@ -18,13 +18,15 @@ layout: default
 
         <p class="d-flex align-items-center">
             <span class="h6 mb-0 text-muted mr-auto">
+                {% if page.datetime.from != page.datetime.to %}<span class="sr-only">from</span>{% endif %}
                 <time datetime="{{ page.datetime.from }}">{{ page.datetime.from | append: "-01" | date: "%B %Y" }}</time>
                 {% if page.datetime.to %}
-                {% if page.datetime.from != page.datetime.to %}- <time datetime="{{ page.datetime.to }}">{{ page.datetime.to | append: "-01" | date: "%B %Y" }}</time>{% endif %}
+                {% if page.datetime.from != page.datetime.to %}<span aria-hidden="true">-</span><span class="sr-only">to</span> <time datetime="{{ page.datetime.to }}">{{ page.datetime.to | append: "-01" | date: "%B %Y" }}</time>{% endif %}
                 {% else %}
-                - &hellip;
+                <span aria-hidden="true">- &hellip;</span><span class="sr-only">to current</span>
                 {% endif %}
             </span>
+            <span class="sr-only">Categories:</span>
             {% for tag in page.tags %}
             <span class="ml-1 badge badge-secondary">{{ tag }}</span>
             {% endfor %}
