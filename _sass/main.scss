@@ -99,3 +99,10 @@ mjx-container {
 #markdown-toc a {
     @extend .text-truncate;
 }
+
+.blockquote {
+    font-size: 1rem;
+    background-color: rgba(0, 0, 0, 0.05);
+    @extend .rounded;
+    @extend .pl-1;
+}
